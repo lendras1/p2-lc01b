@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-
+import releaseImage from "./public/release-1.png";
 
 function LoginPage() {
   const navigate = useNavigate();
@@ -50,7 +50,7 @@ function LoginPage() {
         <div className="w-1/2 border-2 rounded-lg p-5 flex flex-col items-center bg-white justify-center space-y-3 shadow-2xl">
           <div className="text-center">
             <h1 className="text-xl tracking-tight font-semibold">Login </h1>
-         {/*}   <p className="text-sm  font-semibold ">Toko online Podomoro</p> {*/}
+       
           </div>
 
           <form
@@ -97,6 +97,13 @@ function LoginPage() {
        
        
       </div>
+      
+
+      <div className="w-1/2">
+        <img src={releaseImage} alt="login picture" className="object-cover w-full h-full" />
+      </div>
+
+
       
 
     </>
