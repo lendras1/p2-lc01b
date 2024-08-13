@@ -27,8 +27,8 @@ function LoginPage() {
     try {
       const response = await axios({
         method: "post",
-        url: "https://api.h8-fern.foxhub.space/login",
-        data: input, // ini adalah mengirim body
+        url: "https://api.p2.slc1.foxhub.space/login",
+        data: input,
       });
 
       console.log(response);
@@ -46,11 +46,11 @@ function LoginPage() {
 
   return (
     <>
-      <div className="h-screen w-screen flex justify-center items-center bg-gradient-to-r from-cyan-500 to-blue-500">
-        <div className="w-1/3 border-2 rounded-lg p-5 flex flex-col items-center bg-white justify-center space-y-3 shadow-2xl">
+      <div className="h-screen w-1/2 flex justify-center items-center bg-gradient-to-r from-cyan-500 to-blue-500">
+        <div className="w-1/2 border-2 rounded-lg p-5 flex flex-col items-center bg-white justify-center space-y-3 shadow-2xl">
           <div className="text-center">
-            <h1 className="text-xl tracking-tight font-semibold">Login Seller</h1>
-            <p className="text-sm  font-semibold ">Toko online Podomoro</p>
+            <h1 className="text-xl tracking-tight font-semibold">Login </h1>
+         {/*}   <p className="text-sm  font-semibold ">Toko online Podomoro</p> {*/}
           </div>
 
           <form
@@ -85,11 +85,11 @@ function LoginPage() {
           </form>
 
           <button
-      onClick={handleNavigation}
-      className="bg-transparent text-black font-semibold py-2 px-4 rounded hover: bg-white transition duration-100 text-end w-full"
+            onClick={handleNavigation}
+            className="bg-transparent text-black font-semibold py-2 px-4 rounded hover: bg-white transition duration-100 text-end w-full"
     >
-      Create New Account
-    </button> 
+            Create New Account
+            </button> 
 
          
            

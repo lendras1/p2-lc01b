@@ -22,7 +22,7 @@ function RegisterPage() {
     try {
       const response = await axios({
         method: "post",
-        url: "https://api.h8-fern.foxhub.space/seller/register",
+        url: "https://api.p2.slc1.foxhub.space/register",
         data: input, // ini adalah mengirim body
       });
 
@@ -43,9 +43,9 @@ function RegisterPage() {
         <div className="w-1/3 border-2 rounded-lg p-5 flex flex-col items-center bg-white justify-center space-y-3">
           <div className="text-center">
             <h1 className="text-xl tracking-tight font-semibold">
-              Create New Account - Seller
+              Create New Account 
             </h1>
-            <p className="text-sm  font-semibold ">Toko online Podomoro</p>
+        {/* }   <p className="text-sm  font-semibold ">Toko online Podomoro</p> {*/}
           </div>
 
           <form
