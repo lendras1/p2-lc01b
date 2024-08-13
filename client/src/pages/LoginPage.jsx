@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import releaseImage from "./public/release-1.png";
+
 
 function LoginPage() {
   const navigate = useNavigate();
@@ -34,11 +34,12 @@ function LoginPage() {
       console.log(response);
       localStorage.token = response.data.access_token;
       localStorage.email = response.data.email;
-      localStorage.role = response.data.role;
-      localStorage.username = response.data.username;
+    {/*}  localStorage.role = response.data.role; {*/}
       toast.success("Login success");
       navigate("/");
-    } catch (error) {
+    } 
+    
+      catch (error) {
       console.log(error);
       toast.error(error.response.data.message);
     }
@@ -46,6 +47,14 @@ function LoginPage() {
 
   return (
     <>
+
+    <div className= "flex " >
+
+
+    <div className="w-1/2">
+        <img src="/assets/release-1.png" alt="login picture" className="object-cover w-full h-screen " />
+      </div>
+
       <div className="h-screen w-1/2 flex justify-center items-center bg-gradient-to-r from-cyan-500 to-blue-500">
         <div className="w-1/2 border-2 rounded-lg p-5 flex flex-col items-center bg-white justify-center space-y-3 shadow-2xl">
           <div className="text-center">
@@ -79,7 +88,7 @@ function LoginPage() {
               className="py-2 px-4 border-2 rounded-lg"
             />
 
-            <button className="mt-5 py-2 px-4 rounded-lg bg-gradient-to-r from-slate-500 to-slate-800 text-white">
+            <button className=" py-2 px-4 rounded-lg bg-gradient-to-r from-slate-500 to-slate-800 text-white">
               Sign In
             </button>
           </form>
@@ -99,11 +108,9 @@ function LoginPage() {
       </div>
       
 
-      <div className="w-1/2">
-        <img src={releaseImage} alt="login picture" className="object-cover w-full h-full" />
-      </div>
 
 
+</div>
       
 
     </>

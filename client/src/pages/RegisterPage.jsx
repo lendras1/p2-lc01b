@@ -39,29 +39,22 @@ function RegisterPage() {
 
   return (
     <>
-      <div className="h-screen w-screen flex justify-center items-center bg-gradient-to-r from-cyan-500 to-blue-500">
-        <div className="w-1/3 border-2 rounded-lg p-5 flex flex-col items-center bg-white justify-center space-y-3">
+
+<div className="flex">
+      <div className="h-screen w-1/2 flex justify-center items-center bg-gradient-to-r from-cyan-500 to-blue-500">
+        <div className="w-1/2 border-2 rounded-lg p-5 flex flex-col items-center bg-white justify-center space-y-3">
           <div className="text-center">
             <h1 className="text-xl tracking-tight font-semibold">
               Create New Account 
             </h1>
-        {/* }   <p className="text-sm  font-semibold ">Toko online Podomoro</p> {*/}
+       
           </div>
 
           <form
             onSubmit={handleRegisterForm}
             className="flex flex-col w-full gap-2"
           >
-            <label htmlFor="" className="tracking-tight font-semibold">
-              Username
-            </label>
-            <input
-              onChange={handleChangeInput}
-              type="text"
-              name="username"
-              placeholder="Input your username"
-              className="py-2 px-4 border-2 rounded-lg"
-            />
+
             <label htmlFor="" className="tracking-tight font-semibold">
               Email
             </label>
@@ -92,6 +85,15 @@ function RegisterPage() {
           </form>
         </div>
       </div>
+
+      <div className="w-1/2">
+        <img src="/assets/release-1.png" alt="login picture" className="object-cover w-full h-screen" />
+      </div>
+
+</div>
+
+
+
     </>
   );
 }
